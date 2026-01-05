@@ -112,9 +112,9 @@ function createHeartExplosion() {
 const reasons = [
   "U were there during my all major phases of life... U r the safest place for me like my home.",
   "U motivate me to become the best version of myself... U complete me in every way.",
-  "Purest soul... most selfless person... U r so creative... U r a genius baby.",
-  "Handle every difficult situation... patience to listen... U have the bestest dreams.",
-  "Perfect combination of classy, sassy and the sexiest... best voice, hearing ur voice heals my heart."
+  "U have the purest soul... most selfless person... U r so creative... U r a genius baby.",
+  "U handle every difficult situation... patience to listen... U have the bestest dreams.",
+  "U r the perfect combination of classy, sassy and the sexiest... best voice, hearing ur voice heals my heart."
 ];
 let reasonIndex = 0;
 
