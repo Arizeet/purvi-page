@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Purvi ❤️</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts: Quicksand for cute body text, Great Vibes for cursive headers -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Background Floating Hearts Container -->
+  <div id="hearts-container"></div>
+
+  <!-- Loading Overlay -->
+  <div id="loading-screen">
+    <div class="heart-loader"></div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="container">
+    
+    <!-- Section 1: Hero -->
+    <section id="hero" class="screen active-screen">
+      <div class="glass-card">
+        <h1 class="title">Hey, Baby.</h1>
+        <p class="subtitle">I made something special just for you.</p>
+        <button class="btn-primary" onclick="nextSection('memories')">Start the Journey ✨</button>
+      </div>
+    </section>
+
+    <!-- Section 2: Memory Lane -->
+    <section id="memories" class="screen hidden-screen">
+      <div class="glass-card wide">
+        <h2>Our Moments</h2>
+        <div class="gallery">
+          <!-- Placeholder for images, user can replace src later -->
+          <div class="photo-card" onclick="flipCard(this)">
+            <div class="card-inner">
+              <div class="card-front">
+                <span>The Improper Propose 💌</span>
+              </div>
+              <div class="card-back proposal">
+                <p><br>6/8/19 12:17 AM<br>Actually 143 kahuthele aau kichi nai🤦🏻‍♂️ aau tym pass pai bhabibuni hela... Aau rply echa hele dabu nahale nai😂😂😂</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-inner"></div> <!-- Filler for grid layout if needed, but using just divs -->
+          <div class="photo-card" onclick="flipCard(this)">
+            <div class="card-inner">
+              <div class="card-front">
+                <span>Beside the Ocean 🌊</span>
+              </div>
+              <div class="card-back ocean">
+                <p>The view was beautiful, but I still couldn't take my eyes off you. The waves, the sand, and holding your hand. Truly the best days of my life.</p>
+              </div>
+            </div>
+          </div>
+           <div class="photo-card" onclick="flipCard(this)">
+            <div class="card-inner">
+               <div class="card-front">
+                <span>Our Go-To Spot 🌶️</span>
+              </div>
+              <div class="card-back chilis">
+                <p>Chili's🌶️ has the best dishes, but everything tastes better when I share it with you.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="hint">(Tap the cards to flip them!)</p>
+        <button class="btn-secondary" onclick="nextSection('game')">Proceed to Challenge →</button>
+      </div>
+    </section>
+
+    <!-- Section 3: The Game (Gamification) -->
+    <section id="game" class="screen hidden-screen">
+      <div class="glass-card">
+        <h2>Unlock Your Letter 🔒</h2>
+        <p>This letter is locked! Fill the Love Meter to open it.</p>
+        
+        <div class="progress-wrapper">
+          <div class="progress-bar-bg">
+            <div id="love-bar" class="progress-bar-fill"></div>
+          </div>
+          <span id="progress-text">0%</span>
+        </div>
+
+        <button id="pump-btn" class="btn-heart" onclick="pumpLove()">
+          💖 Send Love
+        </button>
+        <p class="hint">Keep clicking the heart!</p>
+      </div>
+    </section>
+
+    <!-- Section 4: The Letter (Unlockable) -->
+    <section id="letter" class="screen hidden-screen">
+      <div class="glass-card long-card">
+        <h2>To My Purvi,</h2>
+        <div class="letter-content">
+          <p>
+            You complete me in every way. You are the kindest, most selfless soul I know, wrapped in the most beautiful body I’ve ever seen.
+          </p>
+          <p>
+            Thank you for being my motivation to become the best version of myself. You handle every situation with grace and have the patience of a saint. You are my genius, my love, and my forever.
+          </p>
+          <p>
+            You have the best voice 
+            <span title="Try listening with your Behera's ear! 😂" style="border-bottom: 1px dotted #ccc; cursor: help;">
+              (better than anyone else)
+            </span>.
+          </p>
+        </div>
+        
+        <div class="divider">✨</div>
+
+        <!-- Interactive Reason Generator -->
+        <div class="reason-area">
+          <h3>Why I Love You #<span id="reason-num">1</span>:</h3>
+          <p id="reason-text">U were there during my all major phases of life... U r the safest place for me like my home.</p>
+          <button class="btn-small" onclick="nextReason()">New Reason 🔄</button>
+        </div>
+
+        <button class="btn-restart" onclick="location.reload()">Replay ↺</button>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
